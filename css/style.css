@@ -328,10 +328,10 @@ ol {
 }
 
 .logo a {
-  display: inline-block;
-  width: 175px;
-  height: 70px;
-  margin-top: 8px;
+ display: inline-block;
+  width: 165px;
+  height: 65px;
+  margin-top: 2px;
 }
 
 /* Default styles */
@@ -617,13 +617,6 @@ ol {
   top: 100px;
   opacity: 0;
 }
-
-
-
-
-
-
-
 
 /*---------------------
   ChoseUs Section
@@ -1475,7 +1468,7 @@ p {
 .about-text {
   background: #000000;
   height: 640px;
-  padding: 120px 70px 0 70px;
+  padding: 120px 50px 0 70px;
 }
 
 .about-text .section-title {
@@ -3418,4 +3411,12 @@ p {
   .search-model-form input {
     font-size: 28px;
   }
+}
+
+/* ------------------ About page ---------------------*/
+
+.gap {
+  background: #0a0a0a;
+  width: 100%;
+  height: 20%;
 }

@@ -315,6 +315,7 @@ ol {
 -----------------------*/
 
 .header-section {
+  font-family: 'Poppins', sans-serif;
   position: absolute;
   left: 0;
   top: 0;
@@ -323,13 +324,14 @@ ol {
   padding-top: 2px;
   z-index: 99;
   background-color: #ffd700;
+  border-bottom: 4px solid black;
 }
 
 .logo a {
   display: inline-block;
-  width: 165px;
-  height: 65px;
-  margin-top:2px;
+  width: 175px;
+  height: 70px;
+  margin-top: 8px;
 }
 
 /* Default styles */
@@ -351,6 +353,7 @@ ol {
   margin: 0;
   padding: 0;
   list-style: none;
+  
 }
 
 .nav-menu li {
@@ -363,13 +366,13 @@ ol {
 
 .nav-menu li a {
   color: #000;
-  font-size: 10px;
-  font-weight: bold;
+  font-size: 12px;
+  font-weight: 800;
   text-decoration: none;
   text-transform: uppercase;
   transition: all 0.2s ease-in-out;
-  padding: 10px 0px;
-  letter-spacing: 3px;
+  padding: 0px 2px;
+  letter-spacing: 7px;
   position: relative;
 }
 
@@ -393,7 +396,6 @@ ol {
 
 .nav-menu .dropdown li a {
   color: #fff;
-  font-size: 1rem;
   padding: 10px;
   text-decoration: none;
   display: block;
@@ -496,7 +498,7 @@ ol {
 
 .top-option .to-search i {
   font-size: 16px;
-  color: #ffffff;
+  color: #000000;
   cursor: pointer;
 }
 
@@ -506,7 +508,7 @@ ol {
 
 .top-option .to-social a {
   display: inline-block;
-  color: #ffffff;
+  color: #000000;
   font-size: 16px;
   margin-left: 15px;
 }
@@ -553,7 +555,7 @@ ol {
 .hs-slider.owl-carousel .owl-nav button {
   height: 46px;
   width: 46px;
-  color: #575050;
+  color: #000000;
   background: rgba(105, 102, 102, 0.5); /* Adjust opacity value (0.0 to 1.0) */
   line-height: 46px;
   text-align: center;
@@ -632,14 +634,24 @@ ol {
   padding-bottom: 70px;
 }
 
+.cs-items-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 960px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
 .cs-item {
-  text-align: center;
+  flex: 0 0 calc(33.33% - 20px);
   margin-bottom: 30px;
+  margin-right: 20px;
+  justify-content: center;
 }
 
 .cs-item:hover span {
   background: #ffd700;
-  color: #ffffff;
+  color: #ffffff; 
 }
 
 .cs-item span {
@@ -647,7 +659,10 @@ ol {
   width: 90px;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 100px;
   color: #ffd700;
   line-height: 90px;
   text-align: center;
@@ -655,14 +670,64 @@ ol {
   -o-transition: all 0.3s;
   transition: all 0.3s;
 }
-
 .cs-item h4 {
   color: #ffffff;
   font-size: 22px;
   font-weight: 600;
   margin-top: 24px;
   margin-bottom: 16px;
+  text-align: center;
 }
+
+p {
+  text-align: justify;
+  margin-bottom: 20px;
+}
+
+
+/* Media Queries */
+@media only screen and (max-width: 1024px) {
+  .cs-item {
+    flex-basis: calc(50% - 1rem);
+    align-items: center;
+    margin-left: 80px;
+  }
+  .cs-item span {
+    align-items: center;
+    justify-content: center;
+    margin-left: 160px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .cs-item {
+    justify-content: center;
+    align-items: center;
+    margin-left: 80px;
+  }
+
+  .cs-item span {
+    align-items: center;
+    justify-content: center;
+    margin-right: 160px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .cs-item {
+    flex-basis: 100%;
+    align-items: center;
+    margin-left: 80px;
+  }
+
+  .cs-item span {
+    align-items: center;
+    justify-content: center;
+    margin-right: 150px;
+  }
+}
+
+
 
 /*---------------------
   Classes Section
@@ -679,7 +744,16 @@ ol {
 
 .class-item {
   overflow: hidden;
-  margin-bottom: 30px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.cs-items-container {
+  display: flex;
+  justify-content: center;
+  max-width: 960px;
+  margin-right: 60px;
+  flex-wrap: wrap;
 }
 
 .class-item .ci-pic img {
@@ -689,8 +763,9 @@ ol {
 .class-item .ci-text {
   background: #0a0a0a;
   position: relative;
-  padding: 10px 30px 26px 30px;
+  padding: 10px 20px 26px 30px;
   z-index: 1;
+  text-align: center;
 }
 
 .class-item .ci-text:after {
@@ -709,7 +784,7 @@ ol {
 }
 
 .class-item .ci-text span {
-  color: #f36100;
+  color: #FFD700;
   font-size: 12px;
   text-transform: uppercase;
   font-weight: 700;
@@ -744,6 +819,43 @@ ol {
   right: 30px;
   bottom: 26px;
 }
+
+.class-item .ci-text p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+  .cs-items-container {
+    max-width: 100%;
+    padding: 0 15px;
+  }
+  
+  .class-item .ci-text {
+    padding: 10px 20px 20px 20px;
+  }
+  
+  .class-item .ci-text h5 {
+    font-size: 18px;
+  }
+  
+  .class-item .ci-text h4 {
+    font-size: 22px;
+  }
+  
+  .class-item .ci-text a {
+    right: 20px;
+    bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .class-item .ci-text h4 {
+    font-size: 20px;
+  }
+}
+
 
 /*---------------------
   Banner Section
@@ -844,7 +956,7 @@ ol {
 }
 
 .ps-item:hover .primary-btn.pricing-btn {
-  background: #f36100;
+  background: #FFD700 ;
 }
 
 .ps-item:hover .thumb-icon {
@@ -871,7 +983,7 @@ ol {
 
 .ps-item .pi-price h2 {
   font-size: 60px;
-  color: #f36100;
+  color: #FFD700 ;
   font-weight: 600;
 }
 
@@ -906,7 +1018,7 @@ ol {
 
 .ps-item .thumb-icon {
   font-size: 48px;
-  color: #f36100;
+  color: #FFD700 ;
   position: absolute;
   left: 50px;
   bottom: 120px;
@@ -953,7 +1065,7 @@ ol {
 
 .gallery .gs-item .thumb-icon {
   font-size: 48px;
-  color: #f36100;
+  color: #FFD700;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1125,7 +1237,7 @@ ol {
   color: #ffffff;
   display: inline-block;
   height: 65px;
-  width: 75px;
+  width: 65px;
   background: #ffd700;
   border-radius: 50%;
   line-height: 65px;
